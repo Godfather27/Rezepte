@@ -44,3 +44,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'sprockets'
+gem 'sprockets-es6', require: 'sprockets/es6'
+
