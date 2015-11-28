@@ -5,9 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'tzinfo-data'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # ======== Asset Pipeline ===========
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -31,6 +28,11 @@ gem 'jbuilder', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+group :development do
+	# Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
+end
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -47,4 +49,10 @@ end
 
 gem 'sprockets'
 gem 'sprockets-es6', require: 'sprockets/es6'
+
+group :production do
+  #PostgreSQL
+  gem 'pg'
+  gem 'rails_12factor'	
+end
 
